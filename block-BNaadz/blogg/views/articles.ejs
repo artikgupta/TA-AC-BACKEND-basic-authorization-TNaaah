@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/articles/new"> Link to create articles</a>
+
+    <h2>List of articles</h2>
+    <% if (articles.length) { %>
+        <% articles.forEach(article => { %>
+            <div>
+                <h4><a href="/articles/<%= article._id%>"><%= article.title%></a></h3>
+
+            </div>
+
+       <% }); %>
+     
+    <% } %>
+</body>
+</html>
