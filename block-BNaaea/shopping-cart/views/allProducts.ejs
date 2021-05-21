@@ -1,0 +1,43 @@
+<%- include('partials/header') -%> 
+    <h1>List of Products</h1>
+    <%if(categories && categories.length) { %> <% categories.forEach(category => { %>
+      <div id="category">
+        <div>
+          <a href="/products/<%= category%>/single"> <%= category%> </a>  
+          <!-- here the category is acting as a placeholder -->
+        </div>
+      </div>
+      <% })%> <% } else {%>
+      <div></div>
+      <% }%>
+
+    <% if(products.length){%>
+        <% products.forEach((product)=>{ %>
+            <div>
+              <h3><%= product.name%></h3>
+              <p><%= product.quantity%></p>
+              <p><%= product.price%></p>
+              <h5>likes: <span><%= product.likes%></span></h5>
+
+              <% if (user.isAdmin) { %>
+                <a href="/products/<%= product._id%>">  <button class="btn">edit</button> <a href="/products/<%= product.id%>/edit">
+                  <a href="/products/<%= product.id%>/delete">
+                    <button class="btn">Delete</button>
+                  </a>
+              <% } %>
+              
+                <a  href="/products/<%= product.id  %>">
+                  <button class="btn">
+                    See more
+                  </button>
+                  </a>
+              
+              <a href="/products/<%= product.id%>/cart">
+                <button class="btn">Add to Cart</button>
+              </a>
+            </div>
+    <%}) } else{ %>
+    <h2>No Products Found</h2>
+    <%} %>
+</body>
+</html>
