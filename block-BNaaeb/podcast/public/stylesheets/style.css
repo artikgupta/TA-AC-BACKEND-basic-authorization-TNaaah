@@ -1,0 +1,107 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #00B7FF;
+  height: 100vh;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* home */
+
+header{
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+}
+
+/* register */
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  background-color: salmon;
+  padding: 2.5rem;
+  border-radius: 10px;
+}
+
+.form-control{
+
+  margin: 1rem 0;
+  padding: .65rem .23rem;
+  box-shadow: 
+    12px 12px 16px 0 rgba(58, 56, 56, 0.1) inset,
+    -8px -8px 12px 0 rgba(48, 45, 45, 0.1) inset;
+    border: 0;
+    border-radius: 10px;
+    background-color: salmon;
+}
+
+/* Login */
+
+.login {
+  background-color:aquamarine;
+
+}
+
+.login-control{
+  margin: 1rem 0;
+  padding: .65rem .43rem;
+  box-shadow: 
+    12px 12px 16px 0 rgba(58, 56, 56, 0.1) inset,
+    -8px -8px 12px 0 rgba(48, 45, 45, 0.1) inset;
+    border: 0;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+
+/* Admin Dashboard */
+
+.Dashboard{
+  background-color: red;
+}
+
+.admin-dash{
+  text-align: center;
+}
+
+/* Create Podcast */
+
+.create-podcast{
+  border:1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.podcast-form{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  background-color: aquamarine;
+padding: 2rem;
+}
