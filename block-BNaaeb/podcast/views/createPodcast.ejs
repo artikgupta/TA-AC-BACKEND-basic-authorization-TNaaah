@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <form action="/podcast" method="POST" enctype="multipart/form-data" class="create-podcast">
+      <div class="podcast-form">
+        <h5>Create Podcast</h5>
+    <input type="text" name="name" id="name" placeholder="name" class="login-control">
+    <div>
+        <label for="">Types</label>
+        <select name="types" id="" class="login-control">
+          <option value="free">free</option>
+          <option value="vip">vip</option>
+          <option value="premium">premium</option>
+        </select>
+      </div>
+  
+    <textarea type="text" name="description" id="name" placeholder="description" class="login-control"></textarea>
+    <input type="file" name="avatar" class="login-control" >
+    <button>submit</button>
+  </div>
+    </form>
+</body>
+</html>
