@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <% if(podcast.length){ %>
+        <% podcast.forEach((ele)=>{ %>
+        <li >
+       <h5><%= ele.title%></h5>
+       <p>
+       <%= ele.description.substring(0,100).concat("....")%>
+       </p>
+ 
+       <p><span class="category"><%= podcast.category%></span></p>
+       <p class="like">Likes <span><%= podcast.likes%></span></p>
+       <% })%> 
+       <% } else {%>
+         <h2 >No Podcast available</h2>
+       </li>
+       <% }%>
+     </ul>
+
+</body>
+</html>
