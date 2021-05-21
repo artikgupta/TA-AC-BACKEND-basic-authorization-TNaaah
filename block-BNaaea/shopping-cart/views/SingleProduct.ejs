@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+    <title>Blogs</title>
+  </head>
+  <body class="single">
+    <header>
+      <h1>List of Products</h1>
+    </header>
+    <ul class="root">
+      <h3><%= product.name%></h3>
+      <p><%= product.quantity%></p>
+      <p><%= product.price%></p>
+      <p><span><%= product.category%></span></p>
+      <h5>
+        likes: <span><%= product.likes%></span>
+        <div class="like">
+          <a href="/products/<%= product.id%>/like">
+            <button class="btn btn-like">like</button>
+          </a>
+          <a href="/products/<%= product.id%>/dislike">
+            <button class="btn btn-dislike">dislike</button>
+          </a>
+        </div>
+      </h5>
+      <div>
+        <% if (user.isAdmin) { %>
+         
+          <a href="/products/<%= product.id%>/edit">
+            <button class="btn">edit</button>
+          </a>
+          
+          <a href="/products/<%= product.id%>/delete">
+            <button class="btn">Delete</button>
+          </a>
+        <% } %>
+
+        <a href="/products/<%= product.id%>">
+          <button class="btn">Add to Cart</button>
+        </a>
+              
+    </ul>
+  </body>
+</html>
